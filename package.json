@@ -3,7 +3,8 @@
   "version": "0.0.0",
   "license": "MIT",
   "scripts": {
-    "start": "ng build && node server.js"
+    "start": "ng build && node server.js",
+    "dev": "ng serve --proxy-config proxy.json"
   },
   "private": true,
   "dependencies": {

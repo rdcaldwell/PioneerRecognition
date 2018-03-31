@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { RobotService } from '../services/robot.service';
 
 @Component({
   selector: 'app-results',
@@ -6,15 +7,19 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./results.component.css']
 })
 export class ResultsComponent implements OnInit {
-  public labels = ['budlight', 'heineken', 'yuengling'];
-  public results = [0.9897540211677551, 0.0102459117770195, 6.418985898370977e-10];
-  public top_k = [0, 1, 2];
+  public labels = [];
+  public results = [];
+  public top_k = [];
 
-  constructor() { }
+  constructor(private robotService: RobotService) { }
 
   ngOnInit() {
     setInterval(() => {
-      console.log('taking picture');
+      this.robotService.captureImage().subscribe((data) => {
+        this.labels = data.labels;
+        this.results = data.results;
+        this.top_k = data.top_k;
+      });
     }, 5000);
   }
 

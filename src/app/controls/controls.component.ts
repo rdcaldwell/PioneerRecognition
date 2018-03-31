@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { RobotService } from '../services/robot.service';
 
 @Component({
   selector: 'app-controls',
@@ -7,22 +8,30 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ControlsComponent {
 
-  constructor() { }
+  constructor(private robotService: RobotService) { }
 
   goForward() {
-    console.log('go forward');
+    this.robotService.goForward().subscribe((data) => {
+      console.log(data);
+    });
   }
 
   goBackward() {
-    console.log('go backward');
+    this.robotService.goBackward().subscribe((data) => {
+      console.log(data);
+    });
   }
 
   turnLeft() {
-    console.log('turn left');
+    this.robotService.turnLeft().subscribe((data) => {
+      console.log(data);
+    });
   }
 
   turnRight() {
-    console.log('turn right');
+    this.robotService.turnRight().subscribe((data) => {
+      console.log(data);
+    });
   }
 
 }
