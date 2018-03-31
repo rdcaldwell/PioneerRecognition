@@ -14,13 +14,18 @@ export class ResultsComponent implements OnInit {
   constructor(private robotService: RobotService) { }
 
   ngOnInit() {
+    this.getImageRecogntionResults();
     setInterval(() => {
-      this.robotService.captureImage().subscribe((data) => {
-        this.labels = data.labels;
-        this.results = data.results;
-        this.top_k = data.top_k;
-      });
+      this.getImageRecogntionResults();
     }, 5000);
+  }
+
+  getImageRecogntionResults() {
+    this.robotService.captureImage().subscribe((data) => {
+      this.labels = data.labels;
+      this.results = data.results;
+      this.top_k = data.top_k;
+    });
   }
 
 }
