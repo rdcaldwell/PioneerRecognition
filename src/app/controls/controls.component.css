@@ -1,0 +1,11 @@
+.control {
+  width: 100%;
+}
+
+.control-side {
+  width: 50%;
+}
+
+svg {
+  cursor: pointer;
+}

@@ -1,0 +1,8 @@
+<h3>Image Recognition Results</h3>
+<div class="padding-top">
+  <ng-container *ngFor="let k of top_k">
+    <p>
+      <strong>{{ labels[k] | uppercase }}:</strong> {{ results[k] | percent: '1.2' }}
+    </p>
+  </ng-container>
+</div>
