@@ -14,10 +14,6 @@ export class ResultsComponent implements OnInit {
   constructor(private robotService: RobotService) { }
 
   ngOnInit() {
-    this.getImageRecogntionResults();
-    setInterval(() => {
-      this.getImageRecogntionResults();
-    }, 5000);
   }
 
   getImageRecogntionResults() {
