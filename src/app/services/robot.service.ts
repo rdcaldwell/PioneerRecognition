@@ -6,7 +6,7 @@ import 'rxjs/add/operator/map';
 @Injectable()
 export class RobotService {
 
-  private ROBOT_SERVER = 'http://192.168.0.101:4000/proxy';
+  private ROBOT_SERVER = 'http://10.0.0.4:3333/api/robot';
 
   constructor(private http: Http) { }
 

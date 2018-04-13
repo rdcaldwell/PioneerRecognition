@@ -1,9 +1,9 @@
 .webcam {
   border: 0px none;
   border-radius: 5px;
-  height: 366px;
-  width: 538px;
-  box-shadow: 2px 2px 12px rgba(0,0,0,0.1), 1px 1px 4px rgba(0,0,0,0.12);
+  height: 480px;
+  width: 640px;
+  box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.1), 1px 1px 4px rgba(0, 0, 0, 0.12);
 }
 
 .stream {
