@@ -6,7 +6,7 @@ import 'rxjs/add/operator/map';
 @Injectable()
 export class RobotService {
 
-  private ROBOT_SERVER = 'http://481bbc92.ngrok.io/api/robot';
+  private ROBOT_SERVER = 'http://fd968a0a.ngrok.io/api/robot';
 
   constructor(private http: Http) { }
 
