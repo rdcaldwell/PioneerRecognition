@@ -9,4 +9,5 @@
 .stream {
   width: 100%;
   text-align: center;
+  transform: rotate(180deg);
 }
