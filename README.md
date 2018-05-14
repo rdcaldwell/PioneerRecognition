@@ -1,6 +1,5 @@
 # PioneerRecognition
 
-## Development server
-
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
-
+  Angular web application used to control the Pioneer Robot P3-AT, stream a live video from a
+Raspberry Pi connected to the Robot, and display results of image recognition in the path of the
+robot.
